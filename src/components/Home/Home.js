@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Perf from 'react-addons-perf';
-
+import styles from './Home.less'
 class Home extends Component {
 
   constructor(props) {
@@ -49,7 +49,7 @@ class Home extends Component {
     let { minusCount, addCount } = actions;
 
     return (
-      <div>
+      <div className={styles.home}>
         <p>{count}</p>
         <button onClick={this.handleAdd}>循环增加</button>
         <button onClick={addCount.bind(this, count)}>增加</button>

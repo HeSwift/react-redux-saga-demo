@@ -1,9 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-
-
-
 import { countAction } from '../actions';
 import Home from '../components/Home/Home';
 
@@ -24,7 +21,5 @@ function mapDispatchToProps(dispatch) {
   return { actions: bindActionCreators(countAction, dispatch) };
 }
 
-App = connect(mapStateToProps, mapDispatchToProps)(App)
 
-
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
